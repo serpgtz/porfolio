@@ -45,3 +45,67 @@ body {
 .brand{
   margin-top: -8px;
 }
+.main {
+  margin: 0 auto;
+  width: 80vw;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  align-items: center;
+
+
+}
+h1{
+  font-size: 3em;
+}
+span{
+  color: aqua;
+}
+.download-cv{
+  padding: 10px 20px;
+  background-color: aqua;
+  border: none;
+  border-radius: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  box-shadow: 1px 3px -5px rgba(102, 231, 200, .69);
+
+}
+.download-cv:hover {
+  background-color: #fff;
+  box-shadow: none;
+}
+.main img {
+  width: 420px;
+  border: solid 7px aqua;
+}
+.about {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  width: 100vw;
+  align-items: center;
+}
+.about img {
+  width: 100%;
+  grid-column: 1/5;
+ 
+  
+}
+.about-info{
+  grid-column: 5/10;
+  padding: 3em;
+}
+.about-info h2{
+  font-size: 2em;
+  color: #311649;
+}
+.divider {
+  height: 4px;
+  width: 60px;
+  background-color: aqua;
+  margin-top: 5px;
+  margin-bottom: 2em;
+}
+.about p {
+  margin-bottom: 2em;
+}
