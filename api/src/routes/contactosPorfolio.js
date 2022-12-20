@@ -16,7 +16,7 @@ router.post("/contact", (req,res)=> {
     .then((data)=> res.json(data))
     .catch((error)=> res.json({message: error}))
 })
-
+  // traer dados
 router.get("/contact", async(req,res)=> {
   
     try {
@@ -26,6 +26,15 @@ router.get("/contact", async(req,res)=> {
         res.status(500).send(error)
     }
 })
-
-
+// eliminar contactos
+router.delete("/contact/:id", async(req,res)=> {
+   
+    try {
+        const {id} = req.params;
+        const contactRemove= await contactSchema.remove({_id: id})
+        res.status(200).json(contactRemove)
+    } catch (error) {
+        res.status(500).send(error)
+    }
+})
 module.exports = router;
