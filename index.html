@@ -12,15 +12,16 @@
 <body>
   <div class="wrapper">
     <header>
+      <section id="navbar">
       <nav class="navbar">
         <div class="brand">
           <h2>SP</h2>
         </div>
-        <ul class="menu">
-          <li><a class="active" href="#">Home</a></li>
-          <li><a href="#">About me</a></li>
-          <li><a href="#">Porfolio</a></li>
-          <li><a href="#">Contact</a></li>
+        <ul class="menu" id="links">
+          <li><a class="seleccionado" href="#navbar" onclick="seleccionar(this)">Home</a></li>
+          <li><a href="#about"onclick="seleccionar(this)">About me</a></li>
+          <li><a href="#porfolio"onclick="seleccionar(this)">Porfolio</a></li>
+          <li><a href="#contact-sections"onclick="seleccionar(this)">Contact</a></li>
         </ul>
       </nav>
       <main class="main">
@@ -34,6 +35,8 @@
       </main>
     </header>
   </div>
+</section>
+  <section id="about">
   <div class="about">
     <img src="./img/P_20211106_030112_BF_1 (2).jpg"/>
  
@@ -45,6 +48,8 @@
      <button class="download-cv">Read More</button>
     </div>
 </div>
+</section>
+<section id="porfolio">
 <div class="porfolio">
   <div class="porfolio-headings">
     <h2>My Porfolio</h2>
@@ -65,9 +70,6 @@
         <a href="https://tresbien.vercel.app/" target="_blank">
           <i class="fa-solid fa-globe"></i>
         </a>
-        <a href="">
-          <i class="fa-solid fa-code"></i>
-        </a>
       </div>
       <div class="project-detail-content">
         <button class="projects-details download-cv">
@@ -79,7 +81,6 @@
     </div>
     <div class="card">
       <div class="card-image2">
-
       </div>
       <div class="card-title">
         <h2>Pokemons</h2>
@@ -91,9 +92,7 @@
         <a href="https://pokemon-api-jbe1.onrender.com/" target="_blank">
           <i class="fa-solid fa-globe"></i>
         </a>
-        <a href="">
-          <i class="fa-solid fa-code"></i>
-        </a>
+       
       </div>
       <div class="project-detail-content">
         <button class="projects-details download-cv">
@@ -105,6 +104,47 @@
     </div>
   </div>
 </div>
+</section>
+<section id="contact-sections">
+<div class="contact-sections">
+  <div class="contact-headings">
+    <h2>Keep in touch</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="container-contact">
+    <img src="./img/contact.jpg"/>
+    <div class="contact-form">
+      <h4>Mandame un Mensaje</h4>
+      <form class="form">
+        <input type="text"placeholder="nombre">
+        <input type="email"placeholder="email">
+        <textarea name="mensaje" id="mensaje-contact"placeholder="Escribe tu mensaje aqui..."></textarea>
+        <button type="submit"class="btn-submit">
+          mandar mensaje
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+</section>
+<footer class="footer">
+  <div class="footer-content">
+    <h2>Sergio Partida</h2>
+    <h5>Full Stack Developer</h5>
+  </div>
+  <div class="social-network">
+    <a href="https://www.facebook.com/sesgio" target="_blank">
+      <i class="fa-brands fa-facebook"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/sergio-manuel-partida" target="_blank">
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/serpgtz" target="_blank">
+      <i class="fa-brands fa-square-github"></i>
+    </a>
+  </div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
 

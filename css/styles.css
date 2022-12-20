@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;700&display=swap');
+html {
+  scroll-behavior: smooth;
+}
 
 * {
   margin: 0;
@@ -21,6 +24,7 @@ body {
   display: flex;
   width: 50%;
   justify-content: space-around;
+ 
 }
 .menu li {
   list-style: none;
@@ -32,8 +36,13 @@ body {
 }
 .navbar{
   display: flex;
+  width: 100vw;
   justify-content: space-between;
-  padding: 2em;
+  padding: 1.5em;
+  background-color: #311649;
+  position: fixed;
+  z-index: 100;
+ 
 }
 .menu .active {
   color: rgb(185, 218, 218);
@@ -79,6 +88,7 @@ span{
 .main img {
   width: 420px;
   border: solid 7px aqua;
+  margin-top: auto;
 }
 .about {
   display: grid;
@@ -115,7 +125,7 @@ span{
 }
 .porfolio-headings {
   width: 100vw;
-  padding: 5em;
+  padding: 1.5em;
 }
 .porfolio-headings h2 {
   font-size: 2em;
@@ -127,6 +137,7 @@ span{
   margin: 0 auto;
   display: flex;
   justify-content: center;
+  
 }
 .card {
   width: 300px;
@@ -179,4 +190,95 @@ span{
   width: 100%;
   justify-content: center;
   margin-top: 1em;
+}
+.contact-headings{
+  padding: em;
+}
+.contact-headings h2 {
+  font-size: 2em;
+  color: #311649;
+  
+}
+.container-contact{
+  display: flex;
+  padding: 3em;
+  margin: 0 auto;
+  align-items: center;
+}
+/* .contact-form{
+  align-items: center;
+} */
+.container-contact img {
+  width: 750px;
+  margin-bottom: 0px;
+  
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  margin-top: 2em;
+}
+.form input {
+  padding: 10px 20px;
+  margin-bottom: 1em;
+  border: #311649 solid 1px;
+  background-color: #311649;
+  color: #fff;
+}
+.form textarea {
+  height: 150px;
+  padding: 1.5em;
+  border: #311649 solid 1px;
+  background-color: #311649;
+  color: #fff;
+
+}
+.btn-submit{
+  padding: 10px 20px;
+  margin: 1em;
+  border: none;
+  text-transform: uppercase;
+  background-color: aqua;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 1px 3px -5px rgba(102, 231, 200, .69)
+}
+.btn-submit:hover {
+  background-color:  #311649;
+  color: #fff;
+}
+.footer {
+  background-color: #311649;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 200px;
+}
+.footer-content h2{
+  font-size: 3em;
+  padding-right: 20px;
+}
+.footer-content h5,
+.social-network{
+  font-size: 1.5em;
+ 
+}
+.footer-content h5{
+  margin-left: 30px;
+}
+.social-network{
+  display: flex;
+  justify-content: space-evenly;
+  width: 300px;
+  margin-top: 1em;
+  
+  
+}
+.social-network i{
+  text-decoration: none;
+  color: #fff;
 }
