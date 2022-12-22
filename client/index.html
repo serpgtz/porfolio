@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous"> -->
   <script src="https://kit.fontawesome.com/7996d08cd8.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body>
   <div class="wrapper">
@@ -116,8 +117,8 @@
     <div class="contact-form">
       <h4>Mandame un Mensaje</h4>
       <form class="form">
-        <input type="text"placeholder="nombre">
-        <input type="email"placeholder="email">
+        <input type="text"placeholder="nombre"name="nombre" id="nombre"class="nombre"/>
+        <input type="email"placeholder="email"name="email"id="email"/>
         <textarea name="mensaje" id="mensaje-contact"placeholder="Escribe tu mensaje aqui..."></textarea>
         <button type="submit"class="btn-submit">
           mandar mensaje

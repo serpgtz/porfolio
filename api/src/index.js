@@ -1,4 +1,5 @@
 const express = require("express")
+const cors = require("cors")
 const mongoose = require("mongoose")
 require("dotenv").config();
 const contactRoutes = require("./routes/contactosPorfolio")
@@ -8,6 +9,7 @@ const port = process.env.PORT || 3001;
 
 //middleware
 app.use(express.json())
+app.use(cors())
 app.use("/api", contactRoutes)
 
 //routes
