@@ -213,6 +213,7 @@ span{
   margin-bottom: 0px;
   
 }
+
 .form {
   display: flex;
   flex-direction: column;
@@ -282,3 +283,19 @@ span{
   text-decoration: none;
   color: #fff;
 }
+.invalido {
+  border:1px solid red;
+  background-color: red;
+}
+.errorMensaje{
+  color: red;
+  text-align: center;
+  font-size: 20px;
+}
+.success{
+  color:green;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+

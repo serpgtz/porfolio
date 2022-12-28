@@ -1,6 +1,7 @@
 
 
 
+
 function seleccionar(link) {
     console.log(link)
     var opciones = document.querySelectorAll('#links  a');
@@ -18,12 +19,111 @@ function seleccionar(link) {
     x.className = "";
 }
 //----------------------------------se hace post del formulario
-    let formu= $(".form")
-    console.log(formu)
+    // let formu= $(".form")
+    // console.log(formu)
     
-   $(".btn-submit").click(function(e){
+//    $(".btn-submit").click(function(e){
+//     e.preventDefault()
+
+//     let btn = document.getElementById("btn")
+//     let name = $(".nombre")[0].value
+//     let email = $("#email")[0].value
+//     let description = $("#mensaje-contact")[0].value
+//     let payload = {
+//         name:name,
+//         email:email,
+//         description:description
+//     }
+    
+//     console.log(payload)
+//     let url = "http://localhost:3001/api/contact"
+
+//     fetch(url,{
+//         method: "POST",
+//         body: JSON.stringify(payload),
+//         headers:{
+//             "content-type": "application/json"
+//         }
+//     })
+//     .then(res=>res.json())
+//     .then(data=>console.log(data))
+//     .catch((error=>console.log(error)))
+
+
+//     formu[0].reset()
+ 
+//    })
+
+   const nombre = document.getElementById("nombre")
+   const correo = document.getElementById("email")
+   const descripcion = document.getElementById("mensaje-contact")
+   const formulario =  document.getElementById("formulario")
+   const btn = document.getElementById("btn")
+   const expresion = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+   eventos() 
+   function eventos(){  
+    document.addEventListener("DOMContentLoaded", btnDisabled)
+
+    correo.addEventListener("blur", formularioEnviar)
+    nombre.addEventListener("blur", formularioEnviar)
+    descripcion.addEventListener("blur", formularioEnviar)
+    formulario.addEventListener("submit",enviarFormulario)
+   }
+   
+   function btnDisabled(){
+    btn.disabled = true
+   }
+
+   function formularioEnviar(e){
+    console.log("desde formulario")
+   
+    if(e.target.value.length > 0){
+         const error = document.querySelector("p.error")
+         if(error){
+        error.remove()
+         }
+
+      
+    }else {
+        e.target.classList.add("invalido")
+        mensajeError("Todos los campos son obligatorios")
+        
+    }
+    if(e.target.type === "email"){
+        if(expresion.test(e.target.value)){
+            const error = document.querySelector("p.error")
+            if(error){
+                error.remove()
+            }
+
+        }else {
+            mensajeError("email no valido")
+        }
+        if((expresion.test(correo.value) !=="" && descripcion.value !== "" && nombre.value !== "")){
+            btn.disabled = false
+        }
+    }
+    function mensajeError(mensaje){
+        const errorMensaje = document.createElement("p")
+        errorMensaje.textContent = mensaje
+        errorMensaje.classList.add("errorMensaje","error")  
+
+        const errores = document.querySelectorAll(".error")
+        if(errores.length === 0) {
+            formulario.appendChild(errorMensaje)
+        }
+
+       
+    }
+    
+   }
+   function enviarFormulario(e){
     e.preventDefault()
-    alert($(".nombre")[0].value)
+    
+    console.log("enviado")
+    
+
     let name = $(".nombre")[0].value
     let email = $("#email")[0].value
     let description = $("#mensaje-contact")[0].value
@@ -46,7 +146,23 @@ function seleccionar(link) {
     .then(res=>res.json())
     .then(data=>console.log(data))
     .catch((error=>console.log(error)))
+
+   
+
+    setTimeout( ()=> {
+        const mensaje = document.createElement("p")
+        mensaje.textContent="se envio Datos con Exito!!"
+        mensaje.classList.add("success")
+        formulario.appendChild(mensaje)
+        formulario.reset()
+
+        setTimeout(()=>{
+            mensaje.remove()
+        },2000)
+
+    },1200)
+    
+   }
  
-   })
 
  
