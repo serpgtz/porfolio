@@ -119,9 +119,10 @@ function seleccionar(link) {
         }else {
             mensajeError("email no valido")
         }
-        if((expresion.test(correo.value) !=="" && descripcion.value !== "" && nombre.value !== "")){
-            btn.disabled = false
-        }
+        
+    }
+    if((correo.value !=="" && descripcion.value !== "" && nombre.value !== "")){
+        btn.disabled = false
     }
     function mensajeError(mensaje){
         const errorMensaje = document.createElement("p")
