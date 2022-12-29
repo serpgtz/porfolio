@@ -124,6 +124,7 @@ function seleccionar(link) {
     if((correo.value !=="" && descripcion.value !== "" && nombre.value !== "")){
         btn.disabled = false
     }
+    
     function mensajeError(mensaje){
         const errorMensaje = document.createElement("p")
         errorMensaje.textContent = mensaje
@@ -178,6 +179,7 @@ function seleccionar(link) {
 
         setTimeout(()=>{
             mensaje.remove()
+            btn.disabled = true;
         },2000)
 
     },1200)
