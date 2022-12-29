@@ -1,3 +1,22 @@
+let menu = document.getElementById("links")
+console.log(menu)
+let toggle_open = document.getElementById("toggle_open")
+let toggle_close = document.getElementById("toggle_close")
+
+toggle_open.addEventListener("click",toggleMenu);
+toggle_close.addEventListener("click",toggleMenu);
+
+function toggleMenu(){
+    console.log("desde menu")
+    menu.classList.toggle("show-menu")
+    if(menu.classList.contains("show-menu")){
+        toggle_open.style.display = "none"
+        toggle_close.style.display = "block"
+    }else {
+        toggle_open.style.display = "block"
+        toggle_close.style.display = "none"
+    }
+}
 
 
 

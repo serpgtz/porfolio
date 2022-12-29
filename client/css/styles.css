@@ -16,9 +16,10 @@ body {
 .wrapper,
 .porfolio {
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
   background-color: #311649;
   color: #fff;
+  font-weight: 400;
 }
 .menu {
   display: flex;
@@ -33,6 +34,7 @@ body {
   color: #fff;
   text-decoration: none;
   padding: 7px 14px;
+  font-weight: 400
 }
 .navbar{
   display: flex;
@@ -48,9 +50,15 @@ body {
   color: rgb(185, 218, 218);
 }
 .menu a:hover {
-  background-color: aqua;
-  color: #311649;
+  background-color: #5b5bb9;
+  color:#fff;
   transition: ease-in .4s;
+}
+.toggle-menu,
+.info_content_subtitle,
+.info-content .social-network{
+  
+  display: none;
 }
 .brand{
   margin-top: -8px;
@@ -66,14 +74,14 @@ body {
 
 }
 h1{
-  font-size: 3em;
+  font-size: clamp(4vw, 1.5em, 3em);
 }
 span{
-  color: aqua;
+  color:#5b5bb9;
 }
 .download-cv{
   padding: 10px 20px;
-  background-color: aqua;
+  background-color:#5b5bb9;
   border: none;
   border-radius: 20px;
   margin-top: 10px;
@@ -87,17 +95,19 @@ span{
 }
 .main img {
   width: 420px;
-  border: solid 7px aqua;
+  border: solid 7px#5b5bb9;
   margin-top: auto;
+  margin-bottom: 30px;
 }
 .about {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   width: 100vw;
   align-items: center;
+  
 }
 .about img {
-  width: 100%;
+  max-width: 100%;
   grid-column: 1/5;
  
   
@@ -105,6 +115,7 @@ span{
 .about-info{
   grid-column: 5/10;
   padding: 3em;
+  
 }
 .about-info h2{
   font-size: 2em;
@@ -113,30 +124,42 @@ span{
 .divider {
   height: 4px;
   width: 60px;
-  background-color: aqua;
+  background-color: #5b5bb9;
   margin-top: 5px;
   margin-bottom: 2em;
 }
 .about p {
   margin-bottom: 2em;
+  
+}
+.about-info p{
+  font-weight: 400;
+  color: black;
 }
 .porfolio {
   color: #fff;
+  
 }
 .porfolio-headings {
   width: 100vw;
   padding: 1.5em;
 }
-.porfolio-headings h2 {
+.porfolio-headings h2,
+.contact-headings h2 {
   font-size: 2em;
 }
 
 .porfolio .container {
   width: 80vw;
-  height: 80vh;
+  /* height: 80vh; */
   margin: 0 auto;
   display: flex;
+  align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  
+ 
+
   
 }
 .card {
@@ -190,6 +213,13 @@ span{
   width: 100%;
   justify-content: center;
   margin-top: 1em;
+  
+}
+.project-detail{
+  
+  width: 80vw;
+  align-items: center;
+  justify-content: center;
 }
 .contact-headings{
   padding: em;
@@ -240,10 +270,12 @@ span{
   margin: 1em;
   border: none;
   text-transform: uppercase;
-  background-color: aqua;
+  background-color:#5b5bb9;
   border-radius: 20px;
   cursor: pointer;
-  box-shadow: 1px 3px -5px rgba(102, 231, 200, .69)
+  box-shadow: 1px 3px -5px rgba(121, 160, 238, 0.69);
+  color: #fff;
+  
 }
 .btn-submit:hover {
   background-color:  #311649;
@@ -298,4 +330,85 @@ span{
   font-size: 20px;
   font-weight: 600;
 }
+
+@media screen and (max-width: 800px) {
+
+  .menu {
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: #200f41;
+    z-index: 1;
+    transform: translateX(-110%);
+    transition: all .5s ease-in-out;
+  }
+  .show-menu{
+    transform: translateX(0%);
+    transition: all .5s ease-in-out;
+  }
+  .menu li{
+    margin: 2em;
+   
+  }
+  /* .porfolio .container .card2{
+    display: none;
+    
+    
+  } */
+  
+  .toggle-menu{
+    display: block;
+  }
+  .fa-bars {
+    font-size: 1.5em;
+  }
+  .toggle-menu .fa-close{
+    font-size: 1.7em;
+    display: none;
+  }
+  .main,
+  .about {
+    display: flex;
+    flex-direction: column-reverse
+  }
+  
+  .main img {
+    width: min(60%, 350px);
+  }
+  .info-content .social-network,
+  .info_content_subtitle {
+    display: block;
+  }
+  .info_content_subtitle {
+    margin-top: 1em;
+  }
+  .info-content-p,
+  .download-cv,
+  .container-contact_img {
+    display: none;
+  }
+  .form{
+    width: 80vw;
+  }
+  .info-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .info-content .social-network{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .footer-content h2{
+    font-size: 30px;
+    margin-left: 37px;
+    color: #5b5bb9;
+  }
+  
+}
+
 

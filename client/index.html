@@ -24,28 +24,44 @@
           <li><a href="#porfolio"onclick="seleccionar(this)">Porfolio</a></li>
           <li><a href="#contact-sections"onclick="seleccionar(this)">Contact</a></li>
         </ul>
+        <div class="toggle-menu" >
+          <i class="fa-solid fa-bars"id="toggle_open"></i>
+          <i class="fas fa-close"id="toggle_close"></i>
+        </div>
       </nav>
       <main class="main">
         <div class="info-content">
+          <span class="info_content_subtitle">Frontend Developer</span> 
           <h1>Yo soy <span>Sergio</span>Partida</h1>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet adipisci aut, quaerat voluptates rerum labore eius, veritatis quae et eos recusandae, quod ex quo itaque magnam saepe repudiandae ducimus unde.</p>
+          <div class="social-network " >
+            <a href="https://www.facebook.com/sesgio" target="_blank">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/sergio-manuel-partida" target="_blank">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/serpgtz" target="_blank">
+              <i class="fa-brands fa-square-github"></i>
+            </a>
+          </div>
+          <p class="info-content-p">Soy Full Stack Developer,familiarizado con Html, Css, Javascript, React, Node.js, Express, PostgreSql, Sequelize, MongoDB, Mongoose, Mui y Bootstrap</p>
           <a download href="./docs/cv.docx"><button class="download-cv" >Download CV</button>
           </a>
         </div>
-        <img src="./img/P_20220415_142641_BF.jpg" alt="Sergio Partida ">
+        <img class="main_img" src="./img/P_20220415_142641_BF.jpg" alt="Sergio Partida ">
       </main>
     </header>
   </div>
 </section>
   <section id="about">
   <div class="about">
-    <img src="./img/P_20211106_030112_BF_1 (2).jpg"/>
+    <img src="./img/programacion-javascript-2640901.jpeg"/>
  
     <div class="about-info">
     <h2>About me</h2>
     <div class="divider"></div>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis molestias reprehenderit voluptatibus, eos et deleniti fugit cumque illo provident vitae possimus ullam, inventore odio similique, dolor adipisci optio? Voluptates, sequi!</p>
-     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis enim doloribus debitis voluptates itaque architecto ratione aut eaque quos deserunt reprehenderit vel, atque voluptas animi illo quibusdam consequatur pariatur magnam.</p>
+      <p>Soy un persona que le gustan los retos, con gusto en trabajar en equipo para lograr objetivos en común, usar el conocimiento adquirido para solucionar problemas.</p>
+     <p>Curse el bootcamp de Henry para continuar con mi pasión de programar, y me gusta estar en constante capacitación para mejorar mis skills de programación.</p>
      <button class="download-cv">Read More</button>
     </div>
 </div>
@@ -73,14 +89,18 @@
         </a>
       </div>
       <div class="project-detail-content">
-        <button class="projects-details download-cv">
+        <!-- <button class="projects-details download-cv">
           <a href="">
             projects details
           </a>
-        </button>
+        </button> -->
+       
       </div>
+      <!-- <div class="project-detail">
+        <p>Ecommerce, en donde se puede simular compras, descontando el inventario, usar pasarela de pagos, login con terceros y grabar en base de datos, react, mongoDB, mongoose, typescript, javascript, mui,express js. </p>
+      </div> -->
     </div>
-    <div class="card">
+    <div class="card card2">
       <div class="card-image2">
       </div>
       <div class="card-title">
@@ -95,13 +115,13 @@
         </a>
        
       </div>
-      <div class="project-detail-content">
+      <!-- <div class="project-detail-content">
         <button class="projects-details download-cv">
           <a href="">
             projects details
           </a>
         </button>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
@@ -113,7 +133,7 @@
     <div class="divider"></div>
   </div>
   <div class="container-contact">
-    <img src="./img/contact.jpg"/>
+    <img class="container-contact_img" src="./img/contact.jpg"/>
     <div class="contact-form">
       <h4>Mandame un Mensaje</h4>
       <form class="form"id="formulario">
